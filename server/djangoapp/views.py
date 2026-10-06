@@ -20,6 +20,7 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 
 # Create a `login_request` view to handle sign in request
+
 @csrf_exempt
 def login_user(request):
     # Get username and password from request.POST dictionary
@@ -46,6 +47,7 @@ def logout_request(request):
 
 # Create a `registration` view to handle sign up request
 # Create a `registration` view to handle sign up request
+
 @csrf_exempt
 def registration(request):
 
@@ -109,6 +111,7 @@ def get_dealer_reviews(request, dealer_id):
         return JsonResponse({"status": 200, "reviews": reviews})
     else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
+
 
 @csrf_exempt
 def add_review(request):
